@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function squareDigits(n) {
+            let res;
+            let tab = [];
+            let result = "";
+            while(n / 10 != 0){
+                res = n % 10;
+                res *= res;
+                tab.unshift(res);
+                n = Math.floor(n / 10);
+            }
+            console.log("tab = ", tab);
+            for(let i = 0; i< tab.length; i++){
+                result += tab[i];
+            }
+            console.log("result = ",result);
+            return parseInt(result);
+        }
+    </script>
+</body>
+</html>
